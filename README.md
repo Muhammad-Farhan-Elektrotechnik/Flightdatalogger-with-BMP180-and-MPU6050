@@ -1,0 +1,11 @@
+**HARDWARE**
+ESP32-S3
+BMP180
+MPU6050
+SD Card Module
+
+**LIBARY**
+Wire.h
+Adafruit_BMP085.h
+SPI.h
+SD.h
