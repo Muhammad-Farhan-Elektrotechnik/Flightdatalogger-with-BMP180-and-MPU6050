@@ -1,16 +1,24 @@
 **HARDWARE**
 ESP32-S3
+
 BMP180
+
 MPU6050
+
 SD Card Module
 
 **LIBARY**
 Wire.h
+
 Adafruit_BMP085.h
+
 SPI.h
+
 SD.h
 
 **PINOUT**
+<img width="374" height="666" alt="Pinout-removebg-preview" src="https://github.com/user-attachments/assets/ce743bbd-9967-4696-99cc-3535c7053860" />
+
  
 	MPU6050
 	
