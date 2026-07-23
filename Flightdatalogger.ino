@@ -4,7 +4,9 @@
 #include <Adafruit_BMP085.h>
 
 
-const int Mpu_Addr = 0x68,SDA=8,SCL=9;
+const int Mpu_Addr = 0x68;
+const int SDA_Pin=8;
+const int SCL_Pin=9;
 
 int16_t AcX, AcY, AcZ;
 
@@ -14,7 +16,7 @@ File Altitude,AC;
 Adafruit_BMP085 bmp;
 
 void setup() {
-  Wire.begin(SDA,SCL);
+  Wire.begin(SDA_Pin,SCL_Pin);
   Serial.begin(9600);
 
 
