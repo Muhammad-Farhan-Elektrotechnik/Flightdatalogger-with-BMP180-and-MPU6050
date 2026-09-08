@@ -1,56 +1,33 @@
-**HARDWARE**
-ESP32-S3
+# Introduction
+A simple flight data logger for ameteur rocket have a task to get the data about how high the rocket and how fast the rocket accelerating. Of course it can always be improved like when the rocket reaches apogee, where the rocket have no acceleration, it will move a servo that trigger a latch mechanism and realasing a parachute. In order to do that Accelerometer (inside MPU6050) and pressure sensor (BMP180) are a great choice. These will be used to built a simple flight data logger, where the data from both of the sensor will be stored inside an SD-Card module. This SD-Card module  and 4-Wires communication protocol SPI (Serial Peripheral Interface) will be the main focus in this repasitory.
 
-BMP180
+HARDWARE
+-------------
+* ESP32
+* BMP180
+* MPU6050
+* SD Card Module
 
-MPU6050
+>[!NOTE]
+>MPU6050 and BMP180 already have built in pull up resisitor
 
-SD Card Module
+LIBARY
+-------
+* Wire.h
+* Adafruit_BMP085.h
+* SPI.h
+* SD.h
 
-**LIBARY**
-Wire.h
+PINOUT
+----------
+ESP32 | MPU6050 | BMP180 | SD Card Module
+----  | ------- | ------ | ---------------
+3.3v  | VCC     | VCC    | VCC
+GND   | GND     | GND    | GND
+GPIO 21| SDA (I2C) | SDA (I2C) |  -
+GPIO 22 | SCL (I2C) | SCL (I2C) | -
+GPIO  | -     | -    | MOSI
+GPIO  | -     | -    | MISO
+GPIO  | -     | -    | CS
+GPIO  | -     | -    | SCK
 
-Adafruit_BMP085.h
-
-SPI.h
-
-SD.h
-
-**PINOUT**
-<img width="374" height="666" alt="Pinout-removebg-preview" src="https://github.com/user-attachments/assets/ce743bbd-9967-4696-99cc-3535c7053860" />
-
- 
-	MPU6050
-	
-VCC to 3.3v
-
-GND to GND
-
-SDA to GPIO 8
-
-SCL to GPIO 9
-
-	BMP180
-	
-VCC to 3.3v
-
-GND to GND
-
-SDA TO GPIO 8 (same as MPU6050)
-
-SCL TO GPIO 9 (same as MPU6050)
-
-(because they both are communicating using I2C where the master using address to identify which component they "talking" to)
-
-	SD Card Module
-VCC to 3.3v
-
-GND to GND
-
-CS to GPIO 10
-
-MOSI to GPIO 11
-
-MISO to GPIO 13
-
-SCK TO GPIO 12
