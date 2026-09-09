@@ -24,8 +24,8 @@ ESP32 | MPU6050 | BMP180 | SD Card Module
 ----  | ------- | ------ | ---------------
 3.3v  | VCC     | VCC    | VCC
 GND   | GND     | GND    | GND
-GPIO 21| SDA (I2C) | SDA (I2C) |  -
-GPIO 22 | SCL (I2C) | SCL (I2C) | -
+GPIO 8| SDA (I2C) | SDA (I2C) |  -
+GPIO 9 | SCL (I2C) | SCL (I2C) | -
 GPIO  | -     | -    | MOSI
 GPIO  | -     | -    | MISO
 GPIO  | -     | -    | CS
