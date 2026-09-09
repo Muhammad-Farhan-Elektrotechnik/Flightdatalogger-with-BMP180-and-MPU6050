@@ -3,7 +3,7 @@ A simple flight data logger for ameteur rocket have a task to get the data about
 
 HARDWARE
 -------------
-* ESP32
+* ESP32-S3
 * BMP180
 * MPU6050
 * SD Card Module
