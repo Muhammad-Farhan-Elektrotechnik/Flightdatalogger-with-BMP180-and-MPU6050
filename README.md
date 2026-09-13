@@ -83,6 +83,9 @@ The second way is more complicated, its called daisy chain/coorprative slave, MI
 >[!TIP]
 >Highly reccomend to check out the video that explained it [here](https://youtu.be/0nVNwozXsIc?si=UiU1P3OI7MybQqMt)
 
+>[!TIP]
+>To sampled more data it is reccomeneded to use FreeRTOS
+
 
 
 
